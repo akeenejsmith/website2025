@@ -1,0 +1,210 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Fix for Mobile Button Display Issues */
+
+/* Target the actual button structure in your HTML */
+#main-page-content .button-box,
+#main-page-content .clapat-button-wrap,
+.content-row .button-box,
+.content-row .clapat-button-wrap {
+    display: inline-block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Target the actual span elements that contain the button text */
+#main-page-content .button-box span,
+#main-page-content .clapat-button-wrap span,
+.content-row .button-box span,
+.content-row .clapat-button-wrap span {
+    display: inline-block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Target the button-border elements specifically */
+#main-page-content .button-border,
+.content-row .button-border {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Mobile Specific Fixes */
+@media only screen and (max-width: 479px) {
+    /* Ensure buttons are visible and properly sized */
+    #main-page-content .button-box {
+        display: block !important;
+        margin: 15px auto !important;
+        text-align: center !important;
+    }
+    
+    #main-page-content .button-border {
+        display: inline-block !important;
+        padding: 12px 20px !important;
+        min-width: 120px !important;
+        font-size: 14px !important;
+        line-height: 1.4 !important;
+    }
+    
+    #main-page-content .button-box span {
+        display: inline-block !important;
+        font-size: 14px !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
+
+/* Tablet Portrait Mode Fix */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    #main-page-content .button-box,
+    #main-page-content .button-border,
+    #main-page-content .button-box span {
+        display: inline-block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
+
+/* Footer Spacing Fix - COMPLETE CORRECTED VERSION */
+
+/* Remove the huge space below footer */
+body {
+    min-height: 100vh !important;
+    height: auto !important;
+}
+
+/* Fix the main content bottom margin that's causing the gap */
+#main-page-content {
+    margin-bottom: 0 !important;
+}
+
+/* Fix footer positioning */
+.clapat-footer {
+    position: relative !important;
+    margin-top: 40px !important;
+}
+
+#footer-container {
+    position: relative !important;
+    bottom: auto !important;
+    margin: 0 auto !important;
+}
+
+/* Add proper spacing to the last content element instead */
+.content-row:last-child {
+    margin-bottom: 40px !important;
+}
+
+/* KEEP THE DOWNLOAD BUTTON COMPLETELY VISIBLE WITH ICON */
+#resumedownload.button-wrap.left {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: initial !important;
+    position: absolute !important;
+    left: -24px !important;
+    top: 25px !important;
+    height: 30px !important;
+    line-height: 30px !important;
+}
+
+/* Make sure the download icon is visible */
+#resumedownload .icon-wrap {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    float: left !important;
+    margin-right: 10px !important;
+}
+
+#resumedownload .button-icon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 30px !important;
+    height: 30px !important;
+    line-height: 30px !important;
+    font-size: 14px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+#resumedownload .button-icon i {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Make sure the download text is visible */
+#resumedownload .button-text {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    color: #000 !important;
+    line-height: 30px !important;
+}
+
+#resumedownload .button-text span {
+    display: inline-block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Desktop adjustments */
+@media only screen and (min-width: 768px) {
+    .clapat-footer {
+        margin-top: 60px !important;
+    }
+    
+    .content-row:last-child {
+        margin-bottom: 60px !important;
+    }
+}
+
+/* Mobile adjustments - stack download button properly */
+@media only screen and (max-width: 767px) {
+    #resumedownload.button-wrap.left {
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        margin: 0 auto 15px auto !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    
+    #resumedownload .icon-wrap {
+        float: none !important;
+        margin-right: 8px !important;
+    }
+	/* Consistent button positioning across all screen sizes */
+#resumedownload.button-wrap.left {
+    position: absolute !important;
+    left: 0px !important;
+    bottom: -5px !important;
+    float: none !important;
+    display: block !important;
+}
+
+/* Ensure it works on all screen sizes */
+@media only screen and (max-width: 767px) {
+    #resumedownload.button-wrap.left {
+        position: absolute !important;
+        left: 0px !important;
+        bottom: -5px !important;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    #resumedownload.button-wrap.left {
+        position: absolute !important;
+        left: 0px !important;
+        bottom: -5px !important;
+    }
+}
+}
