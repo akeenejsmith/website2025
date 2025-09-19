@@ -4131,3 +4131,20 @@
 		text-align: center !important;
 	}
 }
+@media (max-width: 768px) {
+  footer {
+    padding: 20px 15px; /* Reduce padding */
+    text-align: center;
+  }
+  
+  footer p {
+    font-size: 14px; /* Smaller text */
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+  
+  /* Social links spacing */
+  footer a {
+    margin: 0 10px;
+  }
+}

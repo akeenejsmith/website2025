@@ -10,47 +10,7 @@
 		ga('create', 'code_here', 'auto');
 		ga('send', 'pageview');
 	</script>
-<script>
-// Debug version to see what's happening
-function redirectLargeMobile() {
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    const screenHeight = Math.max(window.screen.height, window.screen.width);
-    const screenWidth = Math.min(window.screen.height, window.screen.width);
-    
-    // DEBUG: Log values to console
-    console.log('isMobile:', isMobile);
-    console.log('screenHeight:', screenHeight);
-    console.log('screenWidth:', screenWidth);
-    console.log('User Agent:', navigator.userAgent);
-    
-    // Large mobile screens (iPhone 12 Pro Max and up, large Android phones)
-    const isLargeMobile = isMobile && (
-        screenHeight >= 926 || 
-        screenWidth >= 428
-    );
-    
-    console.log('isLargeMobile:', isLargeMobile);
-    
-    if (isLargeMobile) {
-        console.log('REDIRECTING to Framer site!');
-        window.location.href = 'https://akeenejsmith.framer.website';
-        return;
-    }
-    
-    // For smaller mobile devices, just update the resume button
-    if (isMobile) {
-        console.log('Small mobile detected, updating resume button');
-        const resumeButton = document.querySelector('#resumedownload a');
-        if (resumeButton) {
-            resumeButton.href = 'https://akeenejsmith.framer.website/#mobile-resume';
-        }
-    }
-}
 
-// Run immediately AND on DOM ready
-redirectLargeMobile();
-document.addEventListener('DOMContentLoaded', redirectLargeMobile);
-</script>
     
     <title>Akeene Smith - Making Ideas Real</title>
     <meta name="description" content="Design portfolio of Akeene Smith. Explore industrial design projects, graphic and web design work that brings ideas to life." />
@@ -66,6 +26,7 @@ document.addEventListener('DOMContentLoaded', redirectLargeMobile);
     <link href="style.css" rel="stylesheet" />
     <link href="css/all.min.css" rel="stylesheet" />
 	<link href="mobile-fix.css" rel="stylesheet" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,450,500,600,700" rel="stylesheet">
 	<link rel="manifest" href="site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
